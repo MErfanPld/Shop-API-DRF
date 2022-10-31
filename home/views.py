@@ -3,8 +3,8 @@ from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from .models import Product
-from .serializers import ProductSerializer
+from .models import Product, Category
+from .serializers import ProductSerializer, CategorySerializer
 from permissions import IsOwnerOrReadOnly
 from rest_framework import viewsets
 
@@ -70,3 +70,8 @@ class ProductDeleteView(APIView):
         question = Product.objects.get(pk=pk)
         question.delete()
         return Response({'message': 'question deleted'}, status=status.HTTP_200_OK)
+
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all().order_by('id')
+    serializer_class = CategorySerializer
