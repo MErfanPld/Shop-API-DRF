@@ -43,6 +43,8 @@ INSTALLED_APPS = [
 
     'accounts',
     'home',
+    'cart',
+    'discounts',
 ]
 
 MIDDLEWARE = [
@@ -148,5 +150,7 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
 }
 
-# "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2NzMyNzI0MSwiaWF0IjoxNjY3MjQwODQxLCJqdGkiOiIxZTgyMDQwMmMyMzQ0NWQyYmExZmI0MWRjY2U0ZTY4YSIsInVzZXJfaWQiOjJ9.ne27JJ_KvLmcqBt-KwT19s-d4dxEd04nZ1YFuuxj8xI",
-#   "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3MjQxMTQxLCJpYXQiOjE2NjcyNDA4NDEsImp0aSI6IjhlOGYyZmRlNDU0NDRkZmFiYzkxOWYzZmRlMzIzNDQ2IiwidXNlcl9pZCI6Mn0.sETPbjjXizPGN6d-PCu551VMqtsZRQdlZWooYyyie5g"
+# {
+#   "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2NzMyOTM4NywiaWF0IjoxNjY3MjQyOTg3LCJqdGkiOiI4NDg0YmYxNjA0MjQ0ZTJhYTYxMmVkNGZiMGVkNDQ1YiIsInVzZXJfaWQiOjF9.jCOwprJv5rQG00e4-6fKDuXHz1YOyM7cln5xZPlkZpg",
+#   "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3MjQzMjg3LCJpYXQiOjE2NjcyNDI5ODcsImp0aSI6ImNiOGQ5ZTFhYzliZTQxYzRhOTNiMmJiMzdmZGUxZWZmIiwidXNlcl9pZCI6MX0.M2zvnrfxDz4YxnF8G6FDpOjMy-KJc0_zl27lyTnPN4M"
+# }

@@ -20,6 +20,8 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, Spec
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include('home.urls', namespace='home')),
+    path('', include('cart.urls', namespace='cart')),
+    path('', include('discounts.urls', namespace='discounts')),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('schema/', SpectacularAPIView.as_view(), name='schema'),
     path('schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
