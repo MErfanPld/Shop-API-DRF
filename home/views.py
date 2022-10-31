@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
@@ -5,6 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from .models import Product
 from .serializers import ProductSerializer
 from permissions import IsOwnerOrReadOnly
+from rest_framework import viewsets
 
 
 # Create your views here.
@@ -24,6 +26,15 @@ class ProductListView(APIView):
     def get(self, request):
         questions = Product.objects.all()
         srz_data = ProductSerializer(instance=questions, many=True).data
+        return Response(srz_data, status=status.HTTP_200_OK)
+
+
+class ProductDetailView(APIView):
+
+    def get(self, request, pk):
+        questions = Product.objects.all()
+        product = get_object_or_404(questions, pk=pk)
+        srz_data = ProductSerializer(instance=product).data
         return Response(srz_data, status=status.HTTP_200_OK)
 
 
